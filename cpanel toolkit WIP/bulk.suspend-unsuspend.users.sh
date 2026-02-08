@@ -1,0 +1,1 @@
+for username in $(cat /etc/userdomains | cut -d: -f2); do /scripts/[suspendacct/unsuspendacct] $username; done

@@ -1,0 +1,1 @@
+for i in `cat users`; do echo UN: $i BREAK1 >> /root/final-list; pass=`strings /dev/urandom | tr -dc .~?_A-Z-a-z-0-9 | head -c16 | xargs`; whmapi1 passwd user=$i password=$pass db_pass_update=1; echo PW: $pass BREAK2 >> /root/final-list; done

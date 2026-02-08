@@ -1,0 +1,1 @@
+grep [domain.tld] /etc/userdomains | awk '{print $2}'

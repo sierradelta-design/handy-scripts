@@ -1,0 +1,1 @@
+for domain in `cat /etc/localdomains /etc/remotedomains`; do for user in `grep $domain /etc/userdomains | awk 'NR== 1{print $2}'`; do ip=`grep IP= /var/cpanel/users/$user | cut -d "=" -f2`; echo "$ip $domain www.$domain"; done; done
